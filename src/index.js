@@ -10,7 +10,8 @@ import logger from 'redux-logger';
 /** TODO: Add REDUCERS */
 const airlineList = (state = [], action)=>{
     if(action.type === 'ADD'){
-        state.push(action.data);
+        return [...state, action.data];
+
     }
     return state;
 }
